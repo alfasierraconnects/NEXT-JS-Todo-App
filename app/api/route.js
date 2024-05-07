@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
-import { ConnectDB } from "../lib/config/db";
+import { connectDB } from "../lib/config/db";
 
 const LoadDB = async () => {
-  await ConnectDB();
+  await connectDB();
 };
 
 LoadDB();

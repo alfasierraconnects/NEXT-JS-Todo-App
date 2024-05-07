@@ -1,8 +1,12 @@
 import mongoose from "mongoose";
 
-export const ConnectDB = async () => {
-  await mongoose.connect(
-    "mongodb+srv://alfasierraconnects:Yahooash@369@cluster0.qv53prz.mongodb.net/todo-app"
-  );
-  console.log("DB Connected");
+export const connectDB = async () => {
+  try {
+    await mongoose.connect(
+      "mongodb+srv://alfasierraconnects:Yahooash%40369@cluster0.irhd03i.mongodb.net/nextjsTodo"
+    );
+    console.log("DB Connected");
+  } catch (error) {
+    console.error("Error connecting to database:", error);
+  }
 };

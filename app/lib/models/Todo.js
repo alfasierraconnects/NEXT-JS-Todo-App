@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const { default: mongoose } = require("mongoose");
 
 const Schema = new mongoose.Schema(
   {
@@ -16,10 +16,10 @@ const Schema = new mongoose.Schema(
     },
   },
   {
-    timestamp: true,
+    timestamps: true,
   }
 );
 
-const TodoModel = mongoose.models.todo || mongoose.model("todo", Schema);
+const TodoModel = mongoose.models.Todo || mongoose.model("Todo", Schema);
 
 export default TodoModel;
